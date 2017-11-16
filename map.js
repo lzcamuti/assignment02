@@ -28,7 +28,7 @@ map.on('load', function() { // the event listener that does some code after the 
     type: 'fill',
     source: {
       type: 'geojson',
-      data: 'data/combinedvacantg.geojson' // replace this with the url of your own geojson
+      data: 'assignment02/data/combinedvacantg.geojson' // replace this with the url of your own geojson
     },
     'paint': {
     'fill-color': 'rgba(204, 133, 166, 0.9)',
