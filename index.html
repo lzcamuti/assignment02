@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Understanding Youngstown's Vacant Land</title>
+	<!-- Link to JQuery library (used for modal) -->	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!-- Link to Mapbox GL JS library -->	
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+
+			<!-- Link to d3 -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<!-- Link to Mapbox GL JS css stylesheet -->	
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- Link to our custom stylesheet -->	
+	<link rel="stylesheet" href="styles.css">
+
+
+
+    </style>
+
+</head>
+
+<body>
+	<nav id="menu"></nav>
+	<!-- Map  -->	
+	<div id="map"></div>
+	
+
+	<div class='map-overlay-timeline'>
+        <h2>CHANGE IN VACANT STRUCTURES OVER TIME</h2>
+        <input id='slider' type='range' min='2008' max='2016' step='2' value='2008' />
+        <h3>YEAR: <label id='year-label'>2008</label></h3>
+    </div>
+
+
+	<!-- Info window (shows info about parks when hovering over a park)  -->	
+	<div class='map-overlay' id='features'>
+		<h1 id="pagetitle">UNDERSTANDING YOUNGSTOWN'S VACANT LAND</h1>
+		<h2 id="subtitle"> Mapping the Relationships Between Vacancy and Bio-Physical Conditions </h2>
+</div>	
+	</div>
+
+	<!-- Map legend (content populated by our javascript) -->	
+	<div class='map-overlay2' id='legend'></div>	
+	<div class= 'map-overlay3' id="part-one">
+		<h1>VACANT STRUCTURES IN YOUNGSTOWN</h1>
+		<svg id="bar-chart" width="530" height="300"></svg>
+	</div>
+	
+	<!-- "About this map" modal (hidden by default) -->	
+	<div class='modal'>
+		<h2 class='modal-title'>ABOUT THIS PROJECT</h2>
+		<div class='modal-body'><p>This is a project located in Youngstown, Ohio which seeks to relate the city's numerous vacant residential and industrial properties to biophysical characteristics such as landcover and topography. This map was created in the Scripting Civic Engagement seminar at the University of Virginia (Fall 2017), taught by Andrea Hansen Phillips.</p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='https://cms.ysu.edu/administrative-offices/redi/regional-property-information-system-rpis'>Youngstown State University</a></p><p>For questions or to improve this map, contact <a href='mailto:ejc2mp@virginia.edu'>Liz Camuti</a></p></div>
+		<div class="fb-share-button" data-href="https://www.facebook.com/uvasarc/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fuvasarc%2F&amp;src=sdkpreparse">Share</a></div>
+
+
+</body>
+	<button class='close-button'>&times;</button>  	<!-- A special "x" character (the multiply sign) used in close buttons -->	
+	</div>
+	<div id='screen'></div>
+
+	<!-- Button to hide or show "About this map" modal -->	
+	<button type='button' class='button-default' id="about">ABOUT THIS MAP</button> <!-- Button to hide or show modal -->
+
+
+<!-- Link to our custom javascript -->	
+<script src="map.js"></script>
+<!-- Custom javascript (d3) -->	
+<script src="scripts.js"></script>
+<script src="d3.min.js"></script>
+<script src="d3.js"></script>
+ </html>

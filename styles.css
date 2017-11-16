@@ -1,0 +1,352 @@
+
+
+#menu {
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        top: 60;
+        right:250px;
+        border-radius: 3px;
+        width: 150px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: Source Sans Pro, sans-serif;
+        text-transform: uppercase; 
+        font-weight: bold;
+        margin:10px;
+    }
+
+    #menu a {
+        font-size: 13px;
+        background-color: black;
+        color: white;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    #menu a:last-child {
+        border: none;
+    }
+
+    #menu a:hover {
+        background: black; 
+        color: white;
+    }
+
+    #menu a.active {
+        background: white; 
+        color: black;
+    }
+
+    #menu a.active:hover {
+        background: black; 
+        color: white;
+    }
+
+
+    body {
+  margin: 0;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 0px;
+  padding-left: 100px;
+  overflow-x: hidden;
+
+}
+
+/* Title styles */
+.header { 
+  padding: 0 10px; 
+  position: absolute; /* To make sure the header is on top of the map but the map still only takes up the full height of the page */
+  z-index: 1000; /* To make sure the header is above the map */
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+
+#pagetitle {
+  font-size: 22px;
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+#subtitle { 
+  font-size: 18px;
+  position: relative; /* To make sure the header is on top of the map but the map still only takes up the full height of the page */
+  width: 100%;
+  color: black;
+  font-family: adobe caslon pro, serif;
+  font-style: italic;
+  margin-top: -15px;
+}
+
+/* Body text style */
+p {
+  line-height: 150%;
+  color: #666666;
+}
+
+h2 {
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h3 {
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* Make the map full-width and full height */
+#map-container { 
+  width: 100vw; 
+  height: 100vh; 
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90%;
+  height: 97%; 
+  padding-top: 20px;
+}
+
+/* Set rules for how the map overlays (info box and legend) will be displayed on the page. */
+.map-overlay {
+  position: absolute;
+  top:60;
+  background: rgba(255, 255, 255, 0.8);
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-top: 0px;
+  font-family: Source Sans Pro, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.map-overlay2 {
+  position: absolute;
+  bottom:0;
+  right: 130;
+  background: rgba(255, 255, 255, 0.8);
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-top: 0px;
+  font-family: adobe caslon pro, serif;
+  font-style: italic;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.map-overlay3 {
+  font-size: 10px;
+  font-family: Source Sans Pro, sans-serif;
+  position: absolute;
+  top:156;
+  background: rgba(255, 255, 255, 0.8);
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding: 0 10px; 
+  margin-top: 0px;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.bar{
+fill: black;
+display: none;
+}
+
+.bar.y2008 { display: block; }
+
+.bar:hover {
+  fill: rgba(204, 133, 166, 1);
+  z-index: -1;
+
+}
+
+.axis {
+  font: 10px sans-serif;
+  z-index: -1;
+
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  z-index: -1;
+
+}
+
+text { fill: black; }
+
+
+#legend {
+  bottom: 10px;
+  right:250px;
+  font-family: adobe caslon pro, serif;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  height: 55px;
+  margin-bottom: 40px;
+  width: 180px;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 100%;  /* adds a border radius, a value of 100% changes a box to a circle */
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+/* Timeline */
+
+.map-overlay-timeline {
+    font: 12px/20px 'Source Sans Pro', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:50px;
+    width: 580px;
+    height: 70px;
+    left: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.4);
+    opacity:0.9;
+}
+
+.map-overlay-timeline h2 {
+    line-height: 24px;
+    display: block;
+    position: center;
+    margin: 0 100 10px;
+}
+
+.map-overlay-timeline h3 {
+    line-height: 24px;
+    display: block;
+    position: center;
+    margin: 0 200 10px;
+}
+
+.map-overlay-timeline input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+
+/* Modals */
+
+
+.modal {
+  display: none;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 30px;
+    font-family: adobe caslon pro, serif;
+    font-style: italic;
+    opacity:0.9;
+
+}
+
+.modal .close-button {
+  color: #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  line-height: 30px;
+  font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  opacity:1;
+}
+
+.modal .close-button:hover { 
+  color: #bbb;
+}
+
+
+
+/* Pop-ups */
+
+.mapboxgl-popup-tip {
+  border-top-color: white !important;  /* the triangular shape at the bottom of the popup (tooltip) is formed by a thick border, where only the top border has a color, and the left, right, and bottom borders are transparent. Read more at https://css-tricks.com/snippets/css/css-triangle/ */
+}
+
+.mapboxgl-popup-content { 
+  background-color: white;
+    opacity: 0.9;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);    
+    font-family: Source Sans Pro, sans-serif;
+    font-size: larger;
+    color: black;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 20px;
+    color: black;
+}
+
+/* About this Map Button */
+.button-default {
+    position: absolute;
+    bottom: 10;
+    margin-left: 10px;
+    margin-bottom:50px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+    cursor: pointer; 
+    width: 200px;
+    border: 1px solid rgba(0,0,0,0.4);
+ 
+}
+
+.button-default:hover {
+    font-size: 20px;
+    background: black;
+    color: white;
+}
+
+.button-default:active {
+    font-size: 20px;
+    background: black;
+    color: white;
+}
+
